@@ -1,11 +1,12 @@
 modules:
   jira:issuePanel:
-    - key: new-panel-v2
-      function: resolver
-      title: New Panel V2
-      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+    - key: jira-issue-panel-expense-tutorial
+      resource: main
+      resolver:
+        function: resolver
       render: native
-      route: new-panel-v2
+      title: Jira Expense Tracker
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
 
   function:
     - key: resolver
@@ -13,7 +14,7 @@ modules:
 
 resources:
   - key: main
-    path: src/frontend/
+    path: src/frontend/index.jsx
 
 app:
   id: ari:cloud:ecosystem::app/e7777dea-0e98-4267-850b-46a63cc9852b
@@ -22,4 +23,5 @@ app:
 
 permissions:
   scopes:
+    - storage:app
     - read:jira-work
