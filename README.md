@@ -1,39 +1,41 @@
-# Forge Hello World
+# 🧾 JiraExpense
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira issue panel. 
+## What is Atlassian FORGE Quest?
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+This project was created for the **Atlassian Forge Hackathon: Bonus Level**, where developers were challenged to build apps that extend Jira or Confluence using Atlassian’s Forge platform. I chose the Apprentice path and created an Issue Panel app inside Jira that helps track expenses related to projects or tasks.
 
-## Requirements
 
-See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
+## Overview
 
-## Quick start
+**JiraExpense** is a lightweight expense tracker that runs right inside a Jira issue panel. It’s designed for quick, in-context logging of project-related costs like subscriptions, travel, or supplies — no switching tabs or using spreadsheets.
 
-- Modify your app frontend by editing the `src/frontend/index.jsx` file.
+![JiraExpense UI](/forge_apprentice_lvl.png)
 
-- Modify your app backend by editing the `src/resolvers/index.js` file to define resolver functions. See [Forge resolvers](https://developer.atlassian.com/platform/forge/runtime-reference/custom-ui-resolver/) for documentation on resolver functions.
+You can:
+- Add new expenses (name, amount)
+- View a list of your entries
+- See a running total right inside Jira
 
-- Build and deploy your app by running:
-```
-forge deploy
-```
 
-- Install your app in an Atlassian site by running:
-```
-forge install
-```
+## Technologies Used
 
-- Develop your app by running `forge tunnel` to proxy invocations locally:
-```
-forge tunnel
-```
+- **JavaScript** — using Forge’s JSX-style syntax
+- **Atlassian Forge** — for app hosting and platform integration
+- **Forge UI Kit** — for building the interface
+- **Forge Storage API** — to store user expense data
+- **Forge `invoke()` & resolver** — to handle backend logic
+- **Jira** — runs as an Issue Panel app
 
-### Notes
-- Use the `forge deploy` command when you want to persist code changes.
-- Use the `forge install` command when you want to install the app on a new site.
-- Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
 
-## Support
+## How to Install & Use
 
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+### Prerequisites
+- Atlassian Forge CLI installed  
+  → [Get started with Forge](https://developer.atlassian.com/platform/forge/getting-started/)
+
+### Local Setup
+
+1. **Clone this repo:**
+   ```bash
+   git clone https://github.com/your-username/jira-expense.git
+   cd jira-expense
